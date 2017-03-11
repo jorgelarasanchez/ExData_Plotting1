@@ -4,6 +4,7 @@ fileURL <- 'https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_powe
 dataFileZip <- "./household_power_consumption.zip"
 
 # Download the file
+
 if (file.exists(dataFileZip) == FALSE) {
   download.file(fileURL,destfile=dataFileZip ,method="curl")
   # Unzip the file
