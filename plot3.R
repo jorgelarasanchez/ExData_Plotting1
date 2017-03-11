@@ -13,6 +13,7 @@ if (file.exists(dataFileZip) == FALSE) {
 dataFile <- "./household_power_consumption.txt"
 
 # We take only with field "date" 1 and 2 of February of 2007
+
 dataFile_12 <- grep("^[1,2]/2/2007",readLines(dataFile),value=TRUE)
 
 # Read the data
@@ -29,7 +30,7 @@ data <- cbind(SetTime, data)
 png(filename = './plot3.png', width = 480, height = 480, units='px')
 
 # plot 
-
+# We change Spanish to English
 Sys.setlocale(category = "LC_ALL", locale = "english")
 columnlines <- c("black", "red", "blue")
 labels <- c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
