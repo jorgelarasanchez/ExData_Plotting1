@@ -30,7 +30,7 @@ data <- cbind(SetTime, data)
 png(filename = './plot2.png', width = 480, height = 480, units='px')
 
 # plot
-
+# We change Spanish to English
 Sys.setlocale(category = "LC_ALL", locale = "english")
 plot(data$SetTime, data$Global_active_power, xlab = '', ylab = 'Global Active Power (kilowatts)', type = 'l', col="black")
 
